@@ -1,0 +1,16 @@
+.button {
+  min-width: 125px;
+  height: 40px;
+  transition: var(--main-h-transition);
+  background-color: var(--secondary_bg_color);
+  font: var(--f-s);
+  border-radius: 15px;
+}
+
+.button > * {
+  color: var(--inverted_main_tx_color);
+}
+
+.button:hover {
+  opacity: var(--main-h-opacity);
+}

@@ -1,0 +1,17 @@
+@keyframes caret {
+  from {
+    border-right-color: var(--secondary_tx_color);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 40px 40px 0px;
+}
+
+.header_menu {
+  display: flex;
+}
+
+.header_menu li {
+  margin-right: 40px;
+}
+
+.header_menu li a {
+  font: var(--f-s);
+  font-weight: var(--f_weight_normal);
+  transition: var(--main-h-transition);
+}
+
+.header_menu .logo a {
+  padding: 5px 10px;
+  background-color: var(--secondary_bg_color);
+  color: var(--main_tx_color);
+  font-weight: var(--f_weight_medium);
+}
+
+.header_menu li a:hover {
+  opacity: var(--main-h-opacity);
+}

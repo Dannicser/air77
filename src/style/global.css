@@ -1,0 +1,12 @@
+body {
+  background-color: rgba(243, 243, 243, 1);
+}
+
+.global_wrapper {
+  background: var(--inverted_main_bg_color);
+}
+
+.global_container {
+  width: 1440px;
+  margin: 0 auto;
+}
