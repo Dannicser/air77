@@ -1,18 +1,22 @@
-@import url("../animations/typing.css");
 @import url("../animations/appearing.css");
 
 .main_section {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  align-items: center;
   position: relative;
-
+  height: 560px;
   margin-bottom: 75px;
+
+  opacity: 0;
+  animation-name: appering;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
 
 .main_section .container {
-  right: 52%;
-  bottom: 32%;
-  position: absolute;
+  color: var(--main_tx_color);
+  margin-left: 10%;
 }
 
 .main_section .container .desc {
@@ -23,34 +27,50 @@
   font: var(--f-3xl);
   font-weight: var(--f_weight_semibold);
   width: 100%;
-
-  border-right: 3px solid rgb(0, 0, 0);
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 3.5s steps(26), caret 0.8s steps(44) infinite;
+  padding: 5px 0px 5px 0px;
 }
 
-.main_section .container .sub_container .desc {
+.main_section .container .desc {
   font: var(--f-xl);
   font-weight: var(--f_weight_medium);
 }
 
-.main_section .container .sub_container p {
+.main_section .container p {
   font: var(--f-s);
   font-weight: var(--f_weight_light);
   margin-bottom: 60px;
 }
 
-.main_section .container .sub_container .price {
+.main_section .container .price {
   font: var(--f-l);
   font-weight: var(--f_weight_semibold);
   margin-bottom: 15px;
 }
 
-.sub_container {
-  opacity: 0;
-  animation-delay: 3s;
-  animation-duration: 4s;
-  animation-name: appering;
-  animation-fill-mode: forwards;
+.main_section .container button {
+  margin-bottom: 35px;
+}
+
+.main_section .container .points {
+  display: flex;
+}
+
+.main_section .container .points li {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 60%;
+  background-color: var(--main_bg_color);
+  cursor: pointer;
+}
+
+.main_section .container .points .active {
+  width: 13px;
+  border-radius: 40%;
+}
+
+.slider img {
+  opacity: 0.8;
+  width: 40%;
+  height: 40%;
 }

@@ -14,17 +14,19 @@ header {
 
 .header_menu li a {
   font: var(--f-s);
-  font-weight: var(--f_weight_normal);
+  font-weight: var(--f_weight_semicolon);
+  color: var(--main_tx_color);
   transition: var(--main-h-transition);
 }
 
 .header_menu .logo a {
-  padding: 5px 10px;
-  background-color: var(--secondary_bg_color);
-  color: var(--main_tx_color);
-  font-weight: var(--f_weight_medium);
 }
 
+.header_menu .logo a img {
+  width: 30px;
+  height: 30px;
+  margin-top: -5px;
+}
 .header_menu li a:hover {
   opacity: var(--main-h-opacity);
 }

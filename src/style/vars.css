@@ -11,7 +11,7 @@
   --f_size_s: 15px;
 
   /* line-height- */
-  --l_height_3xl: 55px;
+  --l_height_3xl: 40px;
   --l_height_2xl: 35px;
   --l_height_xl: 30px;
   --l_height_l: 25px;
@@ -34,13 +34,13 @@
   --f-s: var(--f_size_s) / var(--l_height_s) var(--f-family-main);
 
   /* text-colors */
-  --main_tx_color: rgba(0, 0, 0, 1);
-  --inverted_main_tx_color: rgb(255, 255, 255);
+  --main_tx_color: rgb(255, 255, 255);
+  --inverted_main_tx_color: rgb(0, 0, 0);
   --secondary_tx_color: rgba(255, 202, 0, 1);
 
   /* background-colors */
-  --main_bg_color: rgba(0, 0, 0, 1);
-  --inverted_main_bg_color: rgb(255, 255, 255);
+  --main_bg_color: rgb(255, 255, 255);
+  --inverted_main_bg_color: rgb(0, 0, 0);
   --secondary_bg_color: rgba(255, 202, 0, 1);
 
   /* hovers */

@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/index.css" />
 
+    <link rel="shortcut icon" rel="stylesheet" href="./assets/icons/logo.PNG" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 
-    <title>BLACK HOLDING</title>
+    <title>AIR77</title>
   </head>
   <body>
     <div class="global_wrapper">
@@ -17,16 +19,16 @@
         <header>
           <ul class="header_menu">
             <li class="logo">
-              <a href="#">BLACK HOLDING</a>
+              <a href="#">AIR77</a>
+            </li>
+            <li>
+              <a href="#">Наушники Apple</a>
             </li>
             <li>
               <a href="#">Смартфоны</a>
             </li>
             <li>
-              <a href="#">Наушники</a>
-            </li>
-            <li>
-              <a href="#">Ремешки</a>
+              <a href="#">Техника Dyson</a>
             </li>
             <li>
               <a href="#">Аксессуары</a>
@@ -36,17 +38,22 @@
         <section>
           <main class="main_section">
             <div class="container">
-              <h1>Realme 10 Pro+ 5G</h1>
-              <div class="sub_container">
-                <div class="desc">Curved Display, New Vision</div>
-                <p>120Hz Curved Vision display | 108MP Pro light Camera</p>
-                <div class="price">51000₽</div>
-                <button class="button">
-                  <a href="#"> Купить </a>
-                </button>
-              </div>
+              <h1 id="title_slider"></h1>
+              <div id="descr_slider" class="desc"></div>
+              <p></p>
+              <div id="price_slider" class="price"></div>
+              <button class="button">
+                <a href="#"> Купить </a>
+              </button>
+              <ul class="points">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+              </ul>
             </div>
-            <img src="./assets/imgs/common/main_banner.png" alt="" />
+            <div class="slider">
+              <img id="img_slider" class="slide" alt="" />
+            </div>
           </main>
         </section>
       </div>
@@ -81,5 +88,12 @@
         </ul>
       </nav>
     </div>
+    <section>
+      <div class="global_container">
+        <h2 class="product_title">Смартфоны Apple</h2>
+      </div>
+    </section>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
