@@ -1,52 +1,79 @@
 class Slider {
-  slides = [
-    {
-      path: "./assets/imgs/main/headphones.jpg",
-      title: "AirPods Pro 2",
-      descr: "Абсолютно новые. Лучшие.",
-      price: "5.490₽",
-    },
-    {
-      path: "./assets/imgs/main/headphones.jpg",
-      title: "AirPods Pro 1",
-      descr: "Абсолютно старые.",
-      price: "1.490₽",
-    },
-  ];
+  currentSlideIndex = 0;
+  timerId = null;
+  intervalMs = 10000000;
 
-  currentSliderIndex = 0;
-
-  constructor(imgId, titleId, descrId, priceId) {
-    this.img = document.getElementById(imgId);
-    this.title = document.getElementById(titleId);
-    this.descr = document.getElementById(descrId);
-    this.price = document.getElementById(priceId);
+  constructor(backgroundId, slidesId, paginationCirclesId) {
+    this.background = document.getElementById(backgroundId);
+    this.slides = document.getElementById(slidesId);
+    this.paginationCircles = document.getElementById(paginationCirclesId);
   }
 
-  initSlider() {
-    this.img.src = this.slides[this.currentSliderIndex].path;
-    this.title.innerHTML = this.slides[this.currentSliderIndex].title;
-    this.descr.innerHTML = this.slides[this.currentSliderIndex].descr;
-    this.price.innerHTML = this.slides[this.currentSliderIndex].price;
+  init() {
+    this.background.addEventListener("click", () => this.changeSlide());
+    this.paginationCircles.addEventListener("click", (event) => event.stopPropagation());
+    this.addPagination();
+    this.setAutoPlay();
   }
 
-  up() {
-    if (this.currentSliderIndex < this.slides.length) {
-      this.currentSliderIndex++;
+  setAutoPlay() {
+    this.timerId = setTimeout(this.changeSlide.bind(this), this.intervalMs);
+  }
+
+  stopAutoPlay() {
+    clearTimeout(this.timerId);
+  }
+
+  changeSlide(index) {
+    this.stopAutoPlay();
+    this.hideSlide();
+    this.removeActivePaginationClass();
+    this.changeSlideIndex(index);
+    this.showSlide();
+    this.addActivePaginationClass();
+    this.setAutoPlay();
+  }
+
+  changeSlideIndex(index) {
+    if (index) {
+      this.currentSlideIndex = index;
+    } else if (this.currentSlideIndex < this.slides.children.length - 1) {
+      this.currentSlideIndex++;
     } else {
-      this.currentSliderIndex = 0;
+      this.currentSlideIndex = 0;
     }
   }
 
-  down() {
-    if (this.currentSliderIndex > 0) {
-      this.currentSliderIndex--;
-    } else {
-      this.currentSliderIndex = this.slides.length - 1;
-    }
+  showSlide() {
+    this.slides.children[this.currentSlideIndex].classList.add("show");
+  }
+
+  hideSlide() {
+    this.slides.children[this.currentSlideIndex].classList.remove("show");
+  }
+
+  createPaginationCircle() {
+    this.paginationCircles.appendChild(document.createElement("li"));
+  }
+
+  addPagination() {
+    Array.from(this.slides.children).forEach(this.createPaginationCircle.bind(this));
+    Array.from(this.paginationCircles.children).forEach((circle, index) => {
+      circle.addEventListener("click", () => this.changeSlide(index));
+    });
+
+    this.paginationCircles.children[0].classList.add("active");
+  }
+
+  addActivePaginationClass() {
+    this.paginationCircles.children[this.currentSlideIndex].classList.add("active");
+  }
+
+  removeActivePaginationClass() {
+    this.paginationCircles.children[this.currentSlideIndex].classList.remove("active");
   }
 }
 
-const slider = new Slider("img_slider", "title_slider", "descr_slider", "price_slider");
+const slider = new Slider("main_section", "slides", "pagination_circles");
 
-slider.initSlider();
+slider.init();

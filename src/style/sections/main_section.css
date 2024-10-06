@@ -1,76 +1,92 @@
 @import url("../animations/appearing.css");
 
 .main_section {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  position: relative;
-  height: 560px;
+  height: 620px;
   margin-bottom: 75px;
 
   opacity: 0;
   animation-name: appering;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+
+  cursor: pointer;
 }
 
-.main_section .container {
+.main_section .slider {
   color: var(--main_tx_color);
-  margin-left: 10%;
+  height: 100%;
 }
 
-.main_section .container .desc {
-  margin: 10px 0px;
+.main_section .slider ul {
+  margin-bottom: 25px;
 }
 
-.main_section .container h1 {
+.main_section .slider .item {
+  display: none;
+  color: var(--main_tx_color);
+  height: 100%;
+}
+
+.main_section .slider .container h1 {
   font: var(--f-3xl);
   font-weight: var(--f_weight_semibold);
   width: 100%;
   padding: 5px 0px 5px 0px;
 }
 
-.main_section .container .desc {
+.main_section .slider .container .desc {
+  margin: 10px 0px;
+}
+
+.main_section .slider .container .desc {
   font: var(--f-xl);
   font-weight: var(--f_weight_medium);
 }
 
-.main_section .container p {
+.main_section .slider .container p {
   font: var(--f-s);
   font-weight: var(--f_weight_light);
   margin-bottom: 60px;
 }
 
-.main_section .container .price {
+.main_section .slider .container .price {
   font: var(--f-l);
   font-weight: var(--f_weight_semibold);
   margin-bottom: 15px;
 }
 
-.main_section .container button {
+.main_section .slider .container button {
   margin-bottom: 35px;
 }
 
-.main_section .container .points {
+.main_section .slider .item .img_slider img {
+  opacity: 0.8;
+  width: 20%;
+  height: 20%;
+}
+
+.main_section .slider .pagination_circles {
   display: flex;
 }
 
-.main_section .container .points li {
+.main_section .pagination_circles li {
   width: 10px;
   height: 10px;
   margin-right: 5px;
   border-radius: 60%;
   background-color: var(--main_bg_color);
   cursor: pointer;
+  transition: 0.3s;
 }
 
-.main_section .container .points .active {
+.main_section .slider .pagination_circles .active {
   width: 13px;
   border-radius: 40%;
 }
 
-.slider img {
-  opacity: 0.8;
-  width: 40%;
-  height: 40%;
+.main_section .slider .show {
+  display: block;
+  animation-name: appering;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
 }
