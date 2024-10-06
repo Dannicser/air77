@@ -8,7 +8,7 @@
 }
 
 .button > * {
-  color: var(--inverted_main_tx_color);
+  color: var(--main_tx_color);
 }
 
 .button:hover {

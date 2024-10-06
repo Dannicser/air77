@@ -19,14 +19,28 @@ header {
   transition: var(--main-h-transition);
 }
 
-.header_menu .logo a {
-}
-
 .header_menu .logo a img {
   width: 30px;
   height: 30px;
   margin-top: -5px;
 }
+
 .header_menu li a:hover {
   opacity: var(--main-h-opacity);
+}
+
+@media (max-width: 768px) {
+  .header_menu {
+    display: none;
+  }
+
+  .burger li {
+    width: 55px;
+    height: 4px;
+    background-color: var(--main_bg_color);
+    margin-bottom: 5px;
+  }
+
+  .burger {
+  }
 }

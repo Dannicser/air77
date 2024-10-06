@@ -3,12 +3,13 @@
   --f-family-main: "Montserrat", sans-serif;
 
   /* size */
-  --f_size_3xl: 55px;
+  --f_size_3xl: 45px;
   --f_size_2xl: 35px;
   --f_size_xl: 30px;
   --f_size_l: 25px;
   --f_size_m: 20px;
   --f_size_s: 15px;
+  --f_size_us: 12px;
 
   /* line-height- */
   --l_height_3xl: 40px;
@@ -17,6 +18,7 @@
   --l_height_l: 25px;
   --l_height_m: 20px;
   --l_height_s: 15px;
+  --l_height_us: 12px;
 
   /* font-weight */
   --f_weight_light: 300;
@@ -28,10 +30,10 @@
   --f-3xl: var(--f_size_3xl) / var(--l_height_3xl) var(--f-family-main);
   --f-2xl: var(--f_size_2xl) / var(--l_height_2xl) var(--f-family-main);
   --f-xl: var(--f_size_xl) / var(--l_height_xl) var(--f-family-main);
-  --f-m: var(--f_size_m) / var(--l_height_m) var(--f-family-main);
   --f-l: var(--f_size_l) / var(--l_height_l) var(--f-family-main);
   --f-m: var(--f_size_m) / var(--l_height_m) var(--f-family-main);
   --f-s: var(--f_size_s) / var(--l_height_s) var(--f-family-main);
+  --f-us: var(--f_size_us) / var(--l_height_us) var(--f-family-main);
 
   /* text-colors */
   --main_tx_color: rgb(255, 255, 255);

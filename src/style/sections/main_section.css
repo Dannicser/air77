@@ -1,8 +1,9 @@
 @import url("../animations/appearing.css");
 
 .main_section {
-  height: 620px;
+  height: 700px;
   margin-bottom: 75px;
+  padding: 5%;
 
   opacity: 0;
   animation-name: appering;
@@ -13,18 +14,17 @@
 }
 
 .main_section .slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   color: var(--main_tx_color);
   height: 100%;
-}
-
-.main_section .slider ul {
-  margin-bottom: 25px;
 }
 
 .main_section .slider .item {
   display: none;
   color: var(--main_tx_color);
-  height: 100%;
 }
 
 .main_section .slider .container h1 {
@@ -35,12 +35,9 @@
 }
 
 .main_section .slider .container .desc {
-  margin: 10px 0px;
-}
-
-.main_section .slider .container .desc {
   font: var(--f-xl);
   font-weight: var(--f_weight_medium);
+  margin: 10px 0px;
 }
 
 .main_section .slider .container p {
@@ -59,19 +56,25 @@
   margin-bottom: 35px;
 }
 
+.main_section .slider .item .img_slider {
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
 .main_section .slider .item .img_slider img {
   opacity: 0.8;
-  width: 20%;
-  height: 20%;
+  max-height: 300px;
 }
 
 .main_section .slider .pagination_circles {
   display: flex;
+  margin-top: auto;
 }
 
 .main_section .pagination_circles li {
   width: 10px;
   height: 10px;
+  padding: 5px;
   margin-right: 5px;
   border-radius: 60%;
   background-color: var(--main_bg_color);
@@ -85,8 +88,42 @@
 }
 
 .main_section .slider .show {
-  display: block;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
   animation-name: appering;
   animation-duration: 5s;
   animation-fill-mode: forwards;
+}
+
+@media (max-width: 1280px) {
+  .main_section .slider .show {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main_section .slider .container h1 {
+    font: var(--f-2xl);
+  }
+
+  .main_section .slider .container .desc {
+    font: var(--f-m);
+  }
+}
+
+@media (max-width: 768px) {
+  .main_section {
+    height: 650px;
+  }
+
+  .main_section .slider .show {
+    grid-template-columns: 1fr;
+  }
+
+  .main_section .slider .item .img_slider {
+    margin: 0 auto;
+  }
+
+  .main_section .slider .pagination_circles {
+    justify-content: center;
+  }
 }

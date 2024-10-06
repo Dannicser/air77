@@ -1,7 +1,7 @@
 class Slider {
   currentSlideIndex = 0;
   timerId = null;
-  intervalMs = 10000000;
+  intervalMs = 7000e3;
 
   constructor(backgroundId, slidesId, paginationCirclesId) {
     this.background = document.getElementById(backgroundId);
