@@ -1,0 +1,66 @@
+@import url("./carousel.css");
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel {
+  margin-bottom: 50px;
+
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.carousel .carousel_list {
+  display: inline-block;
+  animation: 15s slide infinite linear;
+}
+
+.carousel .carousel_list li {
+  transition: var(--main-h-transition);
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.carousel .carousel_list li:hover {
+  opacity: var(--main-h-opacity);
+}
+
+.carousel .carousel_list li a {
+  color: var(--inverted_main_tx_color);
+}
+
+.carousel .carousel_list li a .title {
+  font: var(--f-xl);
+  font-weight: var(--f_weight_semibold);
+  margin-bottom: 10px;
+}
+
+.carousel .carousel_list li a .descr {
+  font: var(--f-s);
+  font-weight: var(--f_weight_light);
+  margin-bottom: 10px;
+}
+
+.carousel .carousel_list li a .price {
+  font: var(--f-m);
+  font-weight: var(--f_weight_bold);
+  margin-bottom: 10px;
+}
+
+.carousel .carousel_list li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.carousel .carousel_list li a img {
+  margin-bottom: 15px;
+}

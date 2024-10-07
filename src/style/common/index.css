@@ -9,6 +9,7 @@
 
 .button > * {
   color: var(--main_tx_color);
+  font-weight: var(--f_weight_semibold);
 }
 
 .button:hover {

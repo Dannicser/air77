@@ -25,6 +25,7 @@
   --f_weight_normal: 400;
   --f_weight_medium: 500;
   --f_weight_semibold: 600;
+  --f_weight_bold: 700;
 
   /* font */
   --f-3xl: var(--f_size_3xl) / var(--l_height_3xl) var(--f-family-main);
