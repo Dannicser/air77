@@ -1,3 +1,6 @@
+@import url("../animations/opening.css");
+@import url("../animations/closing.css");
+
 header {
   display: flex;
   justify-content: space-between;
@@ -30,10 +33,6 @@ header {
 }
 
 @media (max-width: 768px) {
-  .header_menu {
-    display: none;
-  }
-
   .burger li {
     width: 55px;
     height: 4px;
@@ -41,6 +40,36 @@ header {
     margin-bottom: 5px;
   }
 
-  .burger {
+  header .hidden {
+    display: none;
+  }
+
+  header .opened {
+    flex-direction: column;
+    padding: 50px 25px 0px 25px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: opening 0.5s;
+  }
+
+  header .closing {
+    animation: closing 0.5s forwards;
+  }
+
+  header .opened .logo a {
+    font: var(--f-xl);
+  }
+
+  header .opened li {
+    margin-bottom: 85px;
+  }
+
+  .header_menu li a {
+    font: var(--f-m);
   }
 }
