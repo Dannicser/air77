@@ -11,21 +11,26 @@
 
 .carousel {
   margin-bottom: 50px;
-
   overflow: hidden;
   white-space: nowrap;
 }
 
 .carousel .carousel_list {
   display: inline-block;
-  animation: 15s slide infinite linear;
+  animation: 20s slide infinite linear;
+  padding: 0px 45px;
+}
+
+.carousel:hover .carousel_list {
+  animation-play-state: paused;
 }
 
 .carousel .carousel_list li {
+  display: inline-block;
   transition: var(--main-h-transition);
-  border: 1px solid black;
   cursor: pointer;
   border-radius: 30px;
+  margin: 0px 30px;
 }
 
 .carousel .carousel_list li:hover {
@@ -63,4 +68,5 @@
 
 .carousel .carousel_list li a img {
   margin-bottom: 15px;
+  width: 80%;
 }
