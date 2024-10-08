@@ -5,5 +5,7 @@
 @import url(./sections/header.css);
 @import url(./sections/main_section.css);
 @import url(./sections/carousel.css);
+@import url(./sections/adv.css);
+@import url(./sections/footer.css);
 
 @import url(./common/index.css);

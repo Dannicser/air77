@@ -1,5 +1,4 @@
-@import url("../animations/opening.css");
-@import url("../animations/closing.css");
+@import url("../animations/animations.css");
 
 header {
   display: flex;
@@ -20,6 +19,12 @@ header {
   font-weight: var(--f_weight_semicolon);
   color: var(--main_tx_color);
   transition: var(--main-h-transition);
+}
+
+.header_menu .logo a {
+  font: var(--f-m);
+  font-weight: var(--f_weight_bold);
+  color: var(--secondary_tx_color);
 }
 
 .header_menu .logo a img {

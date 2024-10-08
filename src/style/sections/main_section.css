@@ -1,8 +1,8 @@
-@import url("../animations/appearing.css");
+@import url("../animations/animations.css");
 
 .main_section {
   height: 700px;
-  margin-bottom: 55px;
+  margin-bottom: 35px;
   padding: 5%;
 
   opacity: 0;

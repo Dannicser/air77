@@ -1,23 +1,14 @@
-@import url("./carousel.css");
-
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
+@import url("../animations/animations.css");
 
 .carousel {
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   overflow: hidden;
   white-space: nowrap;
 }
 
 .carousel .carousel_list {
   display: inline-block;
-  animation: 20s slide infinite linear;
+  animation: 35s slide infinite linear;
   padding: 0px 45px;
 }
 
@@ -68,5 +59,4 @@
 
 .carousel .carousel_list li a img {
   margin-bottom: 15px;
-  width: 80%;
 }
