@@ -1,7 +1,7 @@
 @import url("../animations/animations.css");
 
 .carousel {
-  margin-bottom: 55px;
+  margin-bottom: 65px;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -9,7 +9,7 @@
 .carousel .carousel_list {
   display: inline-block;
   animation: 35s slide infinite linear;
-  padding: 0px 45px;
+  /* padding: 0px 45px; */
 }
 
 .carousel:hover .carousel_list {
@@ -21,7 +21,11 @@
   transition: var(--main-h-transition);
   cursor: pointer;
   border-radius: 30px;
-  margin: 0px 30px;
+}
+
+.carousel .carousel_list li a {
+  display: block;
+  width: 300px;
 }
 
 .carousel .carousel_list li:hover {
@@ -33,7 +37,7 @@
 }
 
 .carousel .carousel_list li a .title {
-  font: var(--f-xl);
+  font: var(--f-l);
   font-weight: var(--f_weight_semibold);
   margin-bottom: 10px;
 }
@@ -50,11 +54,8 @@
   margin-bottom: 10px;
 }
 
-.carousel .carousel_list li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.carousel .carousel_list li a .button {
+  width: 50%;
 }
 
 .carousel .carousel_list li a img {
