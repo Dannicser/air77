@@ -17,11 +17,13 @@ class ModalWindow {
   }
 
   open() {
+    document.body.style.overflow = "hidden";
     this.menu.classList.remove("hidden");
     this.menu.classList.add("opened");
   }
 
   close() {
+    document.body.style.overflow = "visible";
     this.menu.classList.add("closing");
 
     setTimeout(() => {
