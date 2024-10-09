@@ -58,3 +58,9 @@
 .carousel .carousel_list li a img {
   margin-bottom: 15px;
 }
+
+@media (max-width: 576px) {
+  .carousel:hover .carousel_list {
+    animation-play-state: running;
+  }
+}

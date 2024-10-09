@@ -14,8 +14,9 @@ class ModalVideoWindow {
   }
 
   close() {
-    this.modal.classList.add("closing");
+    VK.VideoPlayer(document.getElementById("iframe")).pause();
 
+    this.modal.classList.add("closing");
     setTimeout(() => {
       this.modal.classList.add("hidden");
       this.modal.classList.remove("closing");
