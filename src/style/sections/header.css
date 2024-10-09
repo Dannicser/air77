@@ -8,6 +8,10 @@ header {
   display: flex;
 }
 
+.header_menu .burger_sn {
+  display: none;
+}
+
 .header_menu li {
   margin-right: 40px;
 }
@@ -58,6 +62,19 @@ header {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     animation: opening 0.5s;
+  }
+
+  .header_menu li {
+    margin-right: 20px;
+  }
+
+  header .opened .burger_sn {
+    display: flex;
+  }
+
+  header .burger_sn li {
+    width: 30px;
+    height: 30px;
   }
 
   header .closing {
