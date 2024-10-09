@@ -2,11 +2,14 @@
 @import url("./global.css");
 @import url("./vars.css");
 
+@import url("../animations/animations.css");
+
 @import url(./sections/header.css);
 @import url(./sections/main_section.css);
 @import url(./sections/carousel.css);
 @import url(./sections/adv.css);
 @import url(./sections/footer.css);
 @import url(./sections/swiper.css);
+@import url(./sections/video_section.css);
 
 @import url(./common/index.css);

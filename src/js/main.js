@@ -1,8 +1,11 @@
 import { Slider } from "./slider.js";
-import { ModalWindow } from "./window.js";
+import { ModalBurgerWindow } from "./burgerWindow.js";
+import { ModalVideoWindow } from "./modalVideoWindow.js";
 
 const slider = new Slider("main_section", "slides", "pagination_circles");
-const modalWindow = new ModalWindow("menu", "burger");
+const modalBurgerWindow = new ModalBurgerWindow("menu", "burger");
+const modalVideoWindow = new ModalVideoWindow("video", "modal");
+
 const swiperFull = new Swiper(".swiper-full", {
   autoplay: {
     delay: 7000,
@@ -25,4 +28,5 @@ const swiperFull = new Swiper(".swiper-full", {
 });
 
 slider.init();
-modalWindow.init();
+modalBurgerWindow.init();
+modalVideoWindow.init();

@@ -1,4 +1,4 @@
-class ModalWindow {
+class ModalBurgerWindow {
   TABLET_RESOLUTION = 768;
 
   constructor(menuId, burgerId) {
@@ -33,4 +33,4 @@ class ModalWindow {
   }
 }
 
-export { ModalWindow };
+export { ModalBurgerWindow };
